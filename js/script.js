@@ -156,4 +156,80 @@ window.addEventListener('DOMContentLoaded', () => {
 	} catch (error) {
 		console.log(error);
 	}
+	
+	// product html js code
+	
+	try {
+		const sizeBtn = document.querySelectorAll(".size-tool button");
+		const doughBtn = document.querySelectorAll(".dough-tool button");
+		const priceTools = document.querySelectorAll(".price-tools div");
+		const purchase = document.querySelectorAll(".purchase");
+		const addModal = document.querySelector(".add-modal");
+		const closeModal = document.querySelector(".modal-close");
+		const arrowDown = document.querySelector(".footer_link_title_button");
+		const arrowDown2 = document.querySelector(".footer-series-title");
+		const mediaFooter = document.querySelector(".media-footer");
+		const mediaFooter2 = document.querySelector(".series-5");
+		let body = document.querySelector("body");
+
+		arrowDown.addEventListener("click", () => {
+			mediaFooter.classList.toggle("media-footer-active");
+		});
+		arrowDown2.addEventListener("click", () => {
+			mediaFooter2.classList.toggle("media-footer-active");
+		});
+
+		modal = true;
+		purchase.forEach((item) => {
+			item.onclick = function () {
+				if (modal) {
+					addModal.style.display = "block";
+					modal = false;
+					// body.style.overflowY = "hidden";
+				}
+			};
+		});
+
+		closeModal.addEventListener("click", function () {
+			if (modal != true) {
+				addModal.style.display = "none";
+				// body.style.overflowY = "visible";
+				modal = true;
+			}
+		});
+
+		sizeBtn.forEach((item, index) => {
+			item.onclick = function () {
+				sizeBtn.forEach((a, i) => {
+					if (i != index) {
+						a.classList.remove("size-click");
+					}
+				});
+				this.classList.add("size-click");
+			};
+		});
+		doughBtn.forEach((item, index) => {
+			item.onclick = function () {
+				doughBtn.forEach((a, i) => {
+					if (i != index) {
+						a.classList.remove("dough-click");
+					}
+				});
+				this.classList.add("dough-click");
+			};
+		});
+		priceTools.forEach((item, index) => {
+			item.onclick = function () {
+				priceTools.forEach((a, i) => {
+					if (i != index) {
+						a.classList.remove("price-card-click");
+					}
+				});
+				this.classList.add("price-card-click");
+			};
+		});
+	} catch (error) {
+		console.log(error);
+	}
+
 })

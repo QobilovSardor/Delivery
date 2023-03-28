@@ -13,6 +13,7 @@ body {
 	width: 100%;
 	font-family: 'Montserrat', sans-serif;
 	color: var(--black);
+	overflow-x: hidden;
 }
 
 p,
@@ -153,18 +154,28 @@ svg {
 .header .header-language__box li:last-child::before {
 	border: none;
 }
-
+.header .menu{
+	background: var(--black);
+	padding: 13px 25px 27px 25px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 999;
+	display: none;
+}
 /* header end */
 
 /* first product category start */
 .first-products__category .first-product__content,
 .first-products__category .two-product__content,
 .first-products__category .three-product__content {
-	background-repeat: no-repeat;
 	background-size: 100%;
 	border-radius: 15px;
 	padding: 16px;
 	height: 100%;
+	background-size: cover;
 }
 
 .first-products__category .first-product__content {
@@ -245,7 +256,7 @@ svg {
 }
 
 .sorting-bar .select-box__items,
-.sorting-bar .setting-box__items{
+.sorting-bar .setting-box__items {
 	top: 60px;
 	right: 0;
 	background: #fff;
@@ -257,33 +268,42 @@ svg {
 	height: 247px;
 	white-space: nowrap;
 }
-.sorting-bar .setting-box__items{
+
+.sorting-bar .setting-box__items {
 	padding-right: 80px;
 }
-.sorting-bar .setting-box__item{
+
+.sorting-bar .setting-box__item {
 	margin-bottom: 16px;
 	cursor: pointer;
 }
-.sorting-bar .select-box__items-info .select-box__list{
+
+.sorting-bar .select-box__items-info .select-box__list {
 	margin: 16px 0;
 }
+
 .sorting-bar .select-box__items::-webkit-scrollbar {
 	width: 6px;
 	height: 27px;
 	background: #D9D9D9;
 }
-.sorting-bar .select-box svg.icon-active{
+
+.sorting-bar .select-box svg.icon-active {
 	transform: rotate(180deg);
 }
-.sorting-bar .setting-box.setting-box__active{
+
+.sorting-bar .setting-box.setting-box__active {
 	background: #fff;
 }
-.sorting-bar .setting-box.setting-box__active h4{
+
+.sorting-bar .setting-box.setting-box__active h4 {
 	color: var(--black);
 }
-.sorting-bar .setting-box.setting-box__active path{
+
+.sorting-bar .setting-box.setting-box__active path {
 	fill: #000;
 }
+
 .sorting-bar .select-box__items::-webkit-scrollbar-track {
 	background: #F2F2F2;
 }
@@ -332,9 +352,11 @@ svg {
 	border-radius: 100%;
 	background: #D9D9D9;
 }
-.sorting-bar .setting-box__items [type="radio"]:checked+label:before{
+
+.sorting-bar .setting-box__items [type="radio"]:checked+label:before {
 	background: #FF4C34;
 }
+
 .sorting-bar .setting-box__items [type="radio"]:checked+label:after,
 .sorting-bar .setting-box__items [type="radio"]:not(:checked)+label:after {
 	content: '';
@@ -432,6 +454,7 @@ svg {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	border-radius: 15px;
+	background-size: cover;
 }
 
 .profitable-offer .profitable-offer__card-one {
@@ -517,3 +540,119 @@ svg {
 }
 
 /* all-restaurants end */
+
+
+
+
+
+
+
+
+/* media start */
+@media (max-width: 1240px) {
+	.header .header-location {
+		margin-left: 28px;
+		white-space: nowrap;
+	}
+
+	.header .header-logo {
+		margin-right: 28px;
+		width: 143px;
+		height: 41px;
+	}
+
+	.header .header-language {
+		margin-right: 28px;
+	}
+}
+
+@media (max-width: 992px) {
+	.header .media-hide__text {
+		display: none;
+	}
+
+	.header .header-language .global-icon {
+		max-width: 28px;
+		height: 28px;
+	}
+
+	.header .header-location .btn {
+		padding: 12px 12px 12px 14px;
+	}
+
+	.header .header-search input {
+		width: 307px;
+	}
+}
+
+@media (max-width: 900px) {
+	.header .header-search input {
+		width: 214px;
+	}
+}
+
+@media (max-width: 805px) {
+	.header .media-hide__text-location {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.header .header-location span {
+		font-size: 13px;
+	}
+
+	.header .header-search .btn {
+		font-weight: 400;
+	}
+
+	.header .header-logo {
+		width: 118px;
+
+		height: 34px;
+	}
+}
+
+@media (max-width: 700px) {
+	.header .header-language {
+		margin-right: 16px;
+	}
+
+	.header .header-search input {
+		width: 165px;
+	}
+
+	.header .header-location {
+		margin-left: 15px;
+	}
+
+	.header .header-logo {
+		margin-right: 15px;
+	}
+}
+
+@media (max-width: 610px) {
+	.header .header-search {
+		display: none;
+	}
+
+	.header .header-logo {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 435px) {
+
+	.header .header-contact,
+	.header .header-location {
+		display: none;
+	}
+		.header .header-language__box{
+			left: -30px;
+		}
+}
+@media (max-width: 360px) {
+	.header .menu{
+		display: block;
+	}
+}

@@ -180,11 +180,12 @@ svg {
 .first-products__category .first-product__content,
 .first-products__category .two-product__content,
 .first-products__category .three-product__content {
-	background-size: 100%;
 	border-radius: 15px;
 	padding: 16px;
 	height: 100%;
 	background-size: cover;
+	background-position: top center;
+	margin-bottom: 16px;
 }
 
 .first-products__category .first-product__content {
@@ -1209,6 +1210,7 @@ input::-webkit-inner-spin-button {
 footer {
 	background: rgb(242, 242, 242);
 	padding: 40px 0;
+	margin-top: 150px;
 }
 
 footer .footer-wrap {
@@ -1267,20 +1269,6 @@ footer .footer-wrap .footer-right .footer-series-title span {
 }
 
 @media (max-width: 1240px) {
-	.sorting-bar .sorting-bar__link {
-		font-size: 13px;
-	}
-
-	.sorting-bar .sorting-bar__content .media-hide__text1 {
-		display: none;
-	}
-
-	.profitable-offer .profitable-offer__info p {
-		padding-bottom: 0;
-	}
-}
-
-@media (max-width: 1240px) {
 	.header .header-location {
 		margin-left: 28px;
 		white-space: nowrap;
@@ -1295,7 +1283,41 @@ footer .footer-wrap .footer-right .footer-series-title span {
 	.header .header-language {
 		margin-right: 28px;
 	}
+
+	.sorting-bar .sorting-bar__link {
+		font-size: 13px;
+	}
+
+	.sorting-bar .sorting-bar__content .media-hide__text1 {
+		display: none;
+	}
+
+	.profitable-offer .profitable-offer__info p {
+		padding-bottom: 0;
+	}
+
+	.first-products__category .first-product__box-img {
+		margin-left: 0;
+	}
+
+	.first-products__category .first-product__box-img img {
+		object-fit: contain;
+	}
+
+	.first-products__category .first-product__box {
+		margin-left: 0;
+	}
+
+	.first-product__info .mb30 {
+		margin-bottom: 0;
+	}
+
+	.first-product__box-img .three-product__content-img2,
+	.first-product__box-img .three-product__content-img1 {
+		left: 0;
+	}
 }
+
 
 @media (max-width: 992px) {
 	.header .media-hide__text {
@@ -1321,6 +1343,19 @@ footer .footer-wrap .footer-right .footer-series-title span {
 
 	.profitable-offer .profitable-offer__info p {
 		padding-bottom: 10px;
+	}
+
+	.first-products__category .first-product__info h2 {
+		font-size: 18px;
+	}
+
+	.first-products__category .first-product__info p {
+		font-size: 18px;
+	}
+
+	.first-product__info .mb30 {
+		flex-direction: column;
+		align-items: start !important;
 	}
 }
 
@@ -1924,12 +1959,12 @@ footer .footer-wrap .footer-right .footer-series-title span {
 		margin-top: 12px;
 	}
 
-	.product .domin {
+	/* .product .domin {
 		background: url(../images/backgrounds/domin-bg-2.png) no-repeat;
 		background-size: cover;
 		padding: 115px 7px 16px 7px;
 		margin-bottom: 24px;
-	}
+	} */
 
 	.product .domin .domin-title {
 		font-size: 28px;

@@ -6,9 +6,9 @@ window.addEventListener('DOMContentLoaded', () => {
 			headerLanguageList = document.querySelectorAll('.header-language__box li'),
 			headerLanguageListImg = document.querySelectorAll('.header-language__box li img');
 
-			headerLaguabeBtn.addEventListener('click', () => {
-				showLanguageBox.classList.toggle('active');
-			})
+		headerLaguabeBtn.addEventListener('click', () => {
+			showLanguageBox.classList.toggle('active');
+		})
 	} catch (error) {
 		console.log(error);
 	}
@@ -156,9 +156,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	} catch (error) {
 		console.log(error);
 	}
-	
+
 	// product html js code
-	
+
 	try {
 		const sizeBtn = document.querySelectorAll(".size-tool button");
 		const doughBtn = document.querySelectorAll(".dough-tool button");

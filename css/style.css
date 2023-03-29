@@ -1449,6 +1449,9 @@ footer .footer-wrap .footer-right .footer-series-title span {
 		align-items: start !important;
 		gap: 8px;
 	}
+		.first-products__category .first-product__info h2{
+			font-size: 15px;
+		}
 }
 
 @media (max-width: 805px) {

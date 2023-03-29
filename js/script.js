@@ -232,4 +232,48 @@ window.addEventListener('DOMContentLoaded', () => {
 		console.log(error);
 	}
 
+	try {
+		const seriesOne = document.querySelector('.series-one'),
+			selectBoxItems2 = document.querySelector('.select-box__items')
+
+		seriesOne.addEventListener('click', () => {
+			selectBoxItems2.classList.toggle('active');
+		})
+	} catch (error) {
+		console.log(error);
+	}
+
+	try {
+		const seriesTwoModal = document.querySelector(".series-two__modal"),
+			seriesTwoBtn = document.querySelector(".series-two"),
+			btnClose = document.querySelector(".btn-close");
+
+		seriesTwoBtn.addEventListener('click', () => {
+			seriesTwoModal.classList.add('active');
+			document.body.style.overflow = 'hidden';
+		})
+		btnClose.addEventListener("click", () => {
+			console.log(this);
+			seriesTwoModal.classList.remove('active')
+			document.body.style.overflow = 'auto';
+		})
+		seriesTwoModal.addEventListener('click', (e) => {
+			if (e.target === seriesTwoModal) {
+				e.target.classList.remove('active')
+			}
+		})
+	} catch (error) {
+		console.log(error);
+	}
+	
+	try {
+		const seriesThreeModal = document.querySelector('.series-three__modal'),
+		seriesThreeBtn = document.querySelector('.series-three');
+		
+		seriesThreeBtn.addEventListener('click', () => {
+			seriesThreeModal.classList.toggle('active');
+		})
+	} catch (error) {
+		console.log(error);
+	}
 })

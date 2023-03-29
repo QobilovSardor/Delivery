@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+	
 	// header language
 	try {
 		const headerLaguabeBtn = document.querySelector('.default-lagnuage'),
@@ -106,6 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	// ! order list
 	try {
 		const orderListHeaderBtn = document.querySelectorAll('.order-list__header'),
+			orderListHeaderBtnP = document.querySelectorAll('.order-list__header p'),
 			ordersProductBox = document.querySelectorAll('.orders-product__box');
 
 		orderListHeaderBtn.forEach((item, index) => {
@@ -115,7 +117,7 @@ window.addEventListener('DOMContentLoaded', () => {
 						a.classList.remove('active')
 					}
 				})
-				orderListHeaderBtn.forEach((z, t) => {
+				orderListHeaderBtnP.forEach((z, t) => {
 					if (t != index) {
 						z.classList.remove('active-icon')
 					}
@@ -259,7 +261,8 @@ window.addEventListener('DOMContentLoaded', () => {
 		})
 		seriesTwoModal.addEventListener('click', (e) => {
 			if (e.target === seriesTwoModal) {
-				e.target.classList.remove('active')
+				e.target.classList.remove('active');
+				document.body.style.overflow = 'auto'
 			}
 		})
 	} catch (error) {
@@ -273,6 +276,18 @@ window.addEventListener('DOMContentLoaded', () => {
 		seriesThreeBtn.addEventListener('click', () => {
 			seriesThreeModal.classList.toggle('active');
 		})
+	} catch (error) {
+		console.log(error);
+	}
+	try {
+		const timeDropdown = document.querySelector('.time-dropworn'),
+			selectBoxItesm = document.querySelector('.select-box__items');
+			
+			timeDropdown.addEventListener('click', (e) => {
+				selectBoxItesm.classList.toggle('active');
+				timeDropdown.classList.toggle('active-icon');
+
+			})
 	} catch (error) {
 		console.log(error);
 	}
